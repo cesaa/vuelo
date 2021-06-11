@@ -4,7 +4,7 @@
 # GET http://localhost:443/rappi/vuelo/v1/tiquets/
 
 ## Respose
-´´
+`
 [
     {
         "itineraryid": 1,
@@ -43,11 +43,12 @@
         "arrivalHour": "16:22:00"
     }
 ]
-´´
+`
 
 # GET http://localhost:443/rappi/vuelo/v1/tiquets/{id}
 
 ## Respose
+`
 {
     "itineraryid": 1,
     "name": "Cesar Anguiano",
@@ -60,10 +61,11 @@
     "departureHour": "12:22:00",
     "arrivalHour": "16:22:00"
 }
-
+`
 # POST http://localhost:443/rappi/vuelo/v1/tiquets/
 
 ## Request
+`
 {
     "name": "Pedro Paramo",
     "departureDate": "2021-05-11",
@@ -75,8 +77,9 @@
     "departureHour": "12:22:00",
     "arrivalHour": "16:22:00"
 }
-
+`
 ## Respose
+`
 {
     "message": "Se agrego correctamente tu vuelo",
     "vuelo": {
@@ -92,3 +95,4 @@
         "arrivalHour": "16:22:00"
     }
 }
+`
