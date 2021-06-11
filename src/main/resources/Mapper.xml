@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rappi.dao.MapperDao">
+
+	<insert id="setTiquet" useGeneratedKeys="true" keyProperty="tiquet.itineraryid" keyColumn="itineraryid">
+		INSERT INTO VUELOS (
+			NAME, 
+			DEPARTUREDATE, 
+			ARRIVALDATE, 
+			CITYORIGIN, 
+			CITYDESTINATION, 
+			BAGGAGE, 
+			COST, 
+			DEPARTUREHOUR, 
+			ARRIVALHOUR
+		) VALUES(
+			#{tiquet.name},
+			#{tiquet.departureDate},
+			#{tiquet.arrivalDate},
+			#{tiquet.cityOrigin},
+			#{tiquet.cityDestination},
+			#{tiquet.baggage},
+			#{tiquet.cost},
+			#{tiquet.departureHour},
+			#{tiquet.arrivalHour}
+		)
+	</insert>
+</mapper>

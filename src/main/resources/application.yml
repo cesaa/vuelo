@@ -1,0 +1,29 @@
+server:
+  port: 443
+spring:
+  main:
+    banner-mode: 'off'
+  mvc:
+    servlet:
+      path: /rappi/@project.name@/v1
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ''
+    url: jdbc:h2:mem:rappi
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create update
+    show-sql: true
+logging:
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} %5p [%F:%L] %m%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} %5p [%F:%L] %m%n"
+mybatis:
+  mapper-locations: classpath:/*.xml
+  type-aliases-package: com.rappi.model
+  type-handlers-package: com.rappi.dao

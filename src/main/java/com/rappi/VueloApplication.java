@@ -1,0 +1,15 @@
+package com.rappi;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@MapperScan("com.rappi.dao")
+public class VueloApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(VueloApplication.class, args);
+	}
+
+}
